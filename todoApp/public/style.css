@@ -1,0 +1,60 @@
+body {
+  background-color: #008080;
+}
+.list-container {
+  width: 75%;
+}
+.title-bar {
+  margin-left: 100px;
+}
+.items {
+  display: flex;
+  justify-content: space-between;
+}
+.first-part {
+  display: flex;
+}
+.time {
+  background-color: cornflowerblue;
+}
+
+li {
+  display: flex;
+  border-radius: 10px;
+}
+.title {
+  color: white;
+}
+button {
+  width: 100%;
+  border-radius: 0px;
+  background-color: rgba(43, 42, 42, 0.461);
+  color: white;
+  border: none;
+  padding: 10px;
+}
+button:hover {
+  background-color: rgba(133, 130, 130, 0.461);
+  transition: 0.5s;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.icons i {
+  color: black;
+}
+.icons button {
+  background-color: white;
+}
+
+.view i {
+  color: rgb(3, 3, 104);
+}
+.edit i {
+  color: rgba(215, 141, 3, 0.838);
+}
+.delete i {
+  color: rgb(155, 3, 3);
+}

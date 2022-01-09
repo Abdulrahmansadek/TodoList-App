@@ -1,0 +1,35 @@
+
+<div class="container">
+ <div class="container">
+<h1 class="mt-4">{{title}}</h1>
+
+    <div class="row mt-4 ">
+  <div class="col-lg-10">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+       
+
+        
+         <p class="card-text"> task: {{showTask.task}}</p>
+         <p class="card-text">description: {{showTask.description}}</p>
+   
+        
+
+      </div>
+       
+            
+        
+    </div>
+   <p style="color: white;" class="mt-2"> added on :{{showTask.time}}</p>
+           <a href="/todo">
+        <button class="mt-2" type="submit"  >Back home</button></a>
+        <a href="/todo/{{showTask.id}}/edit"> <button class=" mt-2" type="submit" style="background-color: rgba(215, 141, 3, 0.838)">Edit</button></a>
+     <form method="POST" action="/todo/{{showTask.id}}?_method=DELETE">
+
+           <button class=" mt-2" type="submit" style="background-color:  rgb(155, 3, 3);">Delete</button></a>
+
+          </form>
+  </div>
+</div>
+</div>
