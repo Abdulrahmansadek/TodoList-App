@@ -1,4 +1,5 @@
 body {
+  margin: auto;
   background-color: #008080;
 }
 .list-container {
@@ -7,15 +8,27 @@ body {
 .title-bar {
   margin-left: 100px;
 }
-.items {
+.task-container {
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
 }
-.first-part {
+
+.task-part {
   display: flex;
+  width: 200px;
+  margin-left: -20px;
 }
-.time {
-  background-color: cornflowerblue;
+
+.icons {
+  display: flex;
+  margin: 1px;
+}
+.icons i {
+  color: black;
+}
+.icons button {
+  background-color: white;
 }
 
 li {
@@ -37,17 +50,6 @@ button:hover {
   background-color: rgba(133, 130, 130, 0.461);
   transition: 0.5s;
 }
-.icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.icons i {
-  color: black;
-}
-.icons button {
-  background-color: white;
-}
 
 .view i {
   color: rgb(3, 3, 104);
@@ -57,4 +59,8 @@ button:hover {
 }
 .delete i {
   color: rgb(155, 3, 3);
+}
+.main-container {
+  margin: auto;
+  padding: auto;
 }
