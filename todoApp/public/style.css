@@ -28,7 +28,7 @@ body {
   color: black;
 }
 .icons button {
-  background-color: white;
+  background-color: inherit;
 }
 
 li {

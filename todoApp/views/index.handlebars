@@ -1,59 +1,59 @@
 <div class="container mt-4 list-container">
-  
-  <div class="title-button">
-    <span class="navbar-brand mb-0 h1">TODO APP</span>
-    <h3 class="navbar-brand title mt-4">My List</h3>
 
-  </div>
- 
+  <h3 class="navbar-brand title mt-4">My List</h3>
 
+  {{#each todoItems}}
+    <div class="accordion mt-2" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <div
+            class="accordion-button"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapseOne"
+            aria-expanded="true"
+            aria-controls="collapseOne"
+          >
+            <div class="container task-container">
 
+              <div class="task-part mt-2">
+                <input class="form-check-input me-4" type="checkbox" />
+                <p>{{this.task}}</p>
+              </div>
+              <div class="id mt-2">
+                <p>{{this.id}}</p>
+              </div>
+              <div class="icons">
+                <button class="pb-4 view">
+                  <a href="/todo/{{this.id}}">
+                    <i class="bi bi-eye-fill"></i></a></button>
+                <button class="pb-4 edit"><a href="/todo/{{this.id}}/edit"><i
+                      class="bi bi-pen-fill"
+                    ></i></a></button>
+                <form method="POST" action="/todo/{{this.id}}?_method=DELETE">
 
+                  <button class="delete"><i
+                      class="bi bi-trash-fill"
+                    ></i></button>
 
-
-
-
-
-
-
-
-
-
-
-  <ul class="list-group">
-    {{#each todoItems}}
-      <li class="list-group-item items mt-1 pt-3">
-        <div class="container task-container">
-          <div class="task-part">
-
-            <input class="form-check-input me-4" type="checkbox" />
-            <p>{{this.task}}
-            <br />
-
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="id">
-            <p>{{this.id}}</p>
-          </div>
-
-          <div class="icons">
-            <button class="pb-4 view">
-              <a href="/todo/{{this.id}}">
-                <i class="bi bi-eye-fill"></i></a></button>
-            <button class="pb-4 edit"><a href="/todo/{{this.id}}/edit"><i
-                  class="bi bi-pen-fill"
-                ></i></a></button>
-            <form method="POST" action="/todo/{{this.id}}?_method=DELETE">
-
-              <button class="delete"><i class="bi bi-trash-fill"></i></button>
-
-            </form>
+        </h2>
+        <div
+          id="collapseOne"
+          class="accordion-collapse collapse hide"
+          aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample"
+        >
+          <div class="accordion-body">
+            <strong>{{this.description}}</strong>
           </div>
         </div>
-
-      </li>
-
-    {{/each}}
-  </ul>
+      </div>
+    </div>
+  {{/each}}
   <div class="mt-5">
     <a href="/todo/add">
       <button class="add-button" type="submit">+ New Task</button></a>
