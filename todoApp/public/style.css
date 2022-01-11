@@ -1,13 +1,18 @@
 body {
   margin: auto;
-  background-color: #008080;
+  background-color: #164a41;
+}
+.main-nav {
+  background-color: #164a41;
+  height: 80px;
+}
+.main-nav h3 {
+  color: #ffdf6c;
 }
 .list-container {
   width: 75%;
 }
-.title-bar {
-  margin-left: 100px;
-}
+
 .task-container {
   display: flex;
   justify-content: space-between;
@@ -18,35 +23,32 @@ body {
   display: flex;
   width: 200px;
   margin-left: -20px;
+  color: black;
 }
 
 .icons {
   display: flex;
-  margin: 1px;
+  justify-content: space-between;
 }
 .icons i {
   color: black;
 }
 .icons button {
   background-color: inherit;
+  border: none;
 }
 
-li {
-  display: flex;
-  border-radius: 10px;
-}
 .title {
   color: white;
 }
-button {
+.add-button {
   width: 100%;
-  border-radius: 0px;
-  background-color: rgba(43, 42, 42, 0.461);
-  color: white;
-  border: none;
+  border: 1px solid #f1b24a;
+  background-color: #9dc88d;
+  color: black;
   padding: 10px;
 }
-button:hover {
+.add-button:hover {
   background-color: rgba(133, 130, 130, 0.461);
   transition: 0.5s;
 }
@@ -63,4 +65,37 @@ button:hover {
 .main-container {
   margin: auto;
   padding: auto;
+}
+.show-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.delete-edit-btn {
+  display: flex;
+  justify-content: space-between;
+}
+.add {
+  background-color: #f1b24a;
+  color: black;
+  border: none;
+}
+.edit {
+  background-color: #f1b24a;
+  border: none;
+}
+h1 {
+  color: white;
+}
+.add-page {
+  color: white;
+}
+.edit-page {
+  color: white;
+}
+
+.time {
+  color: white;
+}
+.table {
+  color: white;
 }

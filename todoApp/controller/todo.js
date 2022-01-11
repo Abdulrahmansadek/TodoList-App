@@ -7,16 +7,23 @@ const getAllTask = (req, res) => {
 };
 
 const createTask = (req, res) => {
-  const newItem = req.body;
+  const newItem = {
+    task: req.body.task,
+    description: req.body.description,
+    id: uuidv4(),
+    time: moment().format("MMMM Do YYYY, h:mm a"),
+  };
   const { task, description } = newItem;
-  if (!task || !description) {
-    res.status(400).send("please enter a task or and description !!");
-  } else {
-    todoItems.push({
-      ...newItem,
-      id: uuidv4(),
-      time: moment().format("MMMM Do YYYY, h:mm a"),
+  if (!task) {
+    res.status(400).render("error", {
+      msg: "You did not include a task , please add task field ! ",
     });
+  } else if (!description) {
+    res.status(400).render("error", {
+      msg: "You did not include a description , please add description field ! ",
+    });
+  } else {
+    todoItems.push(newItem);
     res.redirect("/todo");
   }
 };
@@ -27,7 +34,7 @@ const getTask = (req, res) => {
   if (showTask) {
     res.render("show", { showTask, title: "Task" });
   } else {
-    res.render("error", { msg: `no task with id :${id}` });
+    res.status(404).render("error", { msg: `no task with id :${id}` });
   }
 };
 
