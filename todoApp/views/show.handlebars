@@ -1,35 +1,46 @@
+<div class="container">
+  <h1>Task</h1>
+  <table class="table container mt-4">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Task</th>
+        <th scope="col">Description</th>
 
-<div class="container main-container">
- <div class="container">
-<h1 class="mt-4">{{title}}</h1>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+        <td>{{showTask.task}}</td>
+        <td>{{showTask.description}}</td>
 
-    <div class="row mt-4 ">
-  <div class="col-lg-10">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-       
+      </tr>
 
-        
-         <p class="card-text"> task: {{showTask.task}}</p>
-         <p class="card-text">description: {{showTask.description}}</p>
-   
-        
+    </tbody>
+  </table>
 
-      </div>
-       
-            
-        
-    </div>
-   <p style="color: white;" class="mt-2"> added on :{{showTask.time}}</p>
-           <a href="/todo">
-        <button class="mt-2" type="submit"  >Back home</button></a>
-        <a href="/todo/{{showTask.id}}/edit"> <button class=" mt-2" type="submit" style="background-color: rgba(215, 141, 3, 0.838)">Edit</button></a>
-     <form method="POST" action="/todo/{{showTask.id}}?_method=DELETE">
-
-           <button class=" mt-2" type="submit" style="background-color:  rgb(155, 3, 3);">Delete</button></a>
-
-          </form>
-  </div>
+  <p class="mt-2 time">this task has been added on {{showTask.time}}</p>
 </div>
+
+<div class="container show-btn">
+  <div class="back-btn">
+    <a href="/todo">
+      <button class="mt-2 btn btn-dark" type="submit">Back home</button></a>
+  </div>
+
+  <div class="delete-edit-btn">
+    <a href="/todo/{{showTask.id}}/edit">
+      <button
+        class="mt-2 me-4 btn btn-warning edit"
+        type="submit"
+      >Edit</button></a>
+
+    <form method="POST" action="/todo/{{showTask.id}}?_method=DELETE">
+
+      <button class="mt-2 btn btn-danger" type="submit">Delete</button>
+
+    </form>
+  </div>
+
 </div>

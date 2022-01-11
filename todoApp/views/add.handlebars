@@ -1,34 +1,31 @@
-
-
-
 <div class="container mt-4">
- 
-    <h1>Add Task</h1>
 
+  <h1>Add Task</h1>
 
-
-<div class="container mt-4 mb-3">
+  <div class="container mt-4 mb-3 add-page">
     <form action="/todo" method="POST">
-  <label for="task" class="form-label">Task</label>
-  <input
-    type="text"
-    class="form-control"
-    id="task"
-    placeholder="add task"
-    name="task"
-  />
-</div>
+      <label for="task" class="form-label"> <p>Task</p> </label>
+      <input
+        type="text"
+        class="form-control"
+        id="task"
+        placeholder="add task"
+        name="task"
+      />
+      <label for="description" class="form-label mt-4">
+        <p>Description</p>
+      </label>
+      <textarea
+        class="form-control"
+        id="description"
+        rows="5"
+        name="description"
+      ></textarea>
+      <div class="add-btn">
+        <button class="mt-2 btn btn-success add" type="submit">Add</button>
+        <a href="/todo" class="mt-2 btn btn-dark">Back home</a>
+      </div>
+    </form>
 
-<div class="container mb-3">
-  <label for="description"  class="form-label">Decription</label>
-  <textarea
-    class="form-control"
-    id="description"
-    rows="5"
-    name="description"
-  ></textarea>
- <button class=" mt-2" type="submit">Add</button>
-  </form>
-  <a href="/todo"><button class=" mt-2" type="submit">Back home</button></a>
-</div>
+  </div>
 </div>
