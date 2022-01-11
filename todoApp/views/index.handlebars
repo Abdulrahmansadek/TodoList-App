@@ -26,9 +26,11 @@
                 <button class="pb-4 view">
                   <a href="/todo/{{this.id}}">
                     <i class="bi bi-eye-fill"></i></a></button>
-                <button class="pb-4 edit" type="submit"><a
+
+                <button class="pb-4 edit" type="button"><a
                     href="/todo/{{this.id}}/edit"
                   ><i class="bi bi-pen-fill"></i></a></button>
+
                 <form method="POST" action="/todo/{{this.id}}?_method=DELETE">
 
                   <button class="delete"><i

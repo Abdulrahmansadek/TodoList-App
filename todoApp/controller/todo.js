@@ -7,7 +7,12 @@ const getAllTask = (req, res) => {
 };
 
 const createTask = (req, res) => {
-  const newItem = req.body;
+  const newItem = {
+    task: req.body.task,
+    description: req.body.description,
+    id: uuidv4(),
+    time: moment().format("MMMM Do YYYY, h:mm a"),
+  };
 
   const { task, description } = newItem;
   if (!task) {
@@ -21,11 +26,7 @@ const createTask = (req, res) => {
         "You did not include a description , please add description field ! "
       );
   } else {
-    todoItems.push({
-      ...newItem,
-      time: moment().format("MMMM Do YYYY, h:mm a"),
-      id: uuidv4(),
-    });
+    todoItems.push(newItem);
     res.redirect("/todo");
   }
 };
