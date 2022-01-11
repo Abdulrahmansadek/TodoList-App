@@ -10,7 +10,16 @@ This app is a backend project is bulid with express.js and i used handlebars.
 - Delete Task.
 - Update Task.
 - Create Task.
+## Packages:
+in this projext i used many packages :
+- express.js
+- uuidv4 : is giving random id in every time we create task.
+- moment : giving us the current date and time, depends the format we add.
+- methodOverride : this one is handling the methods such delete or patch.
 
+## Project setup:
+just npm install to run the app 
+the server is running on localhost 3000 .
 
 
 
