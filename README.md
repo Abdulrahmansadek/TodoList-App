@@ -16,6 +16,10 @@ in this projext i used many packages :
 - uuidv4 : is giving random id in every time we create task.
 - moment : giving us the current date and time, depends the format we add.
 - methodOverride : this one is handling the methods such delete or patch.
+## nice fetures to have :
+- building a real database.
+- create collections.
+- add alarm for each task.
 
 ## Project setup:
 just npm install to run the app 
