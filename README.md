@@ -11,14 +11,14 @@ This app is a backend project bulit with express.js and handlebars.
 - Update Task.
 - Create Task.
 ## Packages:
-in this projext i used many packages :
+the packages has been used in this project :
 - express.js
 - uuidv4 : is giving random id in every time we create task.
 - moment : giving us the current date and time, depends the format we add.
 - methodOverride : this one is handling the methods such delete or patch.
 ## nice fetures to have :
 - building a real database.
-- create collections.
+- the user can create different collection depend on what missions or tasks .
 - add alarm for each task.
 
 ## Project setup:
